@@ -22,7 +22,7 @@ veces = 0
 def jugamos(intento):
     global ganaste, veces, terminar
     if intento <= 10:
-        if intento <= 0:
+        if intento < 0:
             print("El número debe ser mayor o igual a 0")
         else:
             print("El número ingresado es ", intento)
@@ -32,13 +32,13 @@ def jugamos(intento):
             veces += 1
             # Si numalea es igual a intento, el jugador gano
             if numalea == intento:
-                print("\n//////////////      GANASTE     \\\\\\\\\\\\\\\\\\\\\\\\\n")
+                print("//////////////      GANASTE     \\\\\\\\\\\\\\\\\\\\\\\\\n")
                 # suma 1 si el jugador gano
                 ganaste += 1
             else:
-                print("\n//////////////      No ganaste! >( ")
+                print("//////////////      No ganaste! >( ")
 
-                print("El número que salio es el ", numalea)
+                print("El número que salio es el ", numalea, "\n")
     else:
         terminar = False
         # Estadísticas del juego
